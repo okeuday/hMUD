@@ -8,20 +8,15 @@ var HMUD_Config = {
  * host: window.location.hostname,
  * host: "127.0.0.1",
  */
-    host: window.location.hostname,
-    port: 4000,
-
-/*
- * The port the Flash Policy Server is listening. You MUST have this correctly
- * configured due to Flash's strict security policies.
- */
-    policyPort: 4010,
+    host: "127.0.0.1",
+    port: 4001,
+    path: "/sillymud_server/game_loop",
 
 /* The maximum length of the command history list */
     maxHistorySize: 100,
 
 /* The minimum length a command should have to be added to the history. */
-    historyMinLength: 3,
+    historyMinLength: 1,
 
 /*
  * If you scroll up, the scroll will be locked at that position, so that you

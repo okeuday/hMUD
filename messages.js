@@ -1,27 +1,26 @@
-/* Copie este arquivo para messages.js caso queira exibir mensagens em português */
 var HMUD_Messages = {
-    loadingClient: "<span class=\"loading\">Carregando... </span>",
+    loadingClient: "<span class=\"loading\">Loading... </span>",
      clientLoaded: "<span class=\"loaded\">OK!</span><br>",
-       connecting: "<span class=\"connecting\">Conectando ao DeBo MUD... </span>",
-        connected: "<span class=\"connected\">conectado!</span><br>",
-     disconnected: "<br><span class=\"disconnected\">Desconectado.</span><hr>",
-          ioError: "<br><span class=\"error\">Erro de Entrada e Saída.</span>",
-    securityError: "<span class=\"error\">hmm... não deu (Security Error).</span><br>",
+       connecting: "<span class=\"connecting\">Connecting to CloudI SillyMUD... </span>",
+        connected: "<span class=\"connected\">Connected!</span><br>",
+     disconnected: "<br><span class=\"disconnected\">Disconnected.</span><hr>",
+          ioError: "<br><span class=\"error\">Input/Output Error.</span>",
+    securityError: "<span class=\"error\">Security Error.</span><br>",
 
-      windowTitle: "DeBo (hMUD)",
- windowTitleAlert: "»»»»»!«««««",
+      windowTitle: "CloudI SillyMUD",
+ windowTitleAlert: "»»»»»»!««««««",
 
-         cmdGuide: "Guia de comandos",
-       selectFont: "Fonte preferida",
+         cmdGuide: "Help",
+       selectFont: "Fonts",
 
-      clearOutput: "Limpar tela",
-            lines: "linhas",
-     preserve1000: "Preservar últimas 1000 linhas",
-             half: "metade",
-              all: "tudo",
+      clearOutput: "Terminal",
+            lines: "Lines",
+     preserve1000: "Preserve 1000 Lines",
+             half: "Clear Half",
+              all: "Clear All",
 
-          connect: "Conectar",
-        reconnect: "Reconectar",
-       disconnect: "Desconectar"
+          connect: "Connect",
+        reconnect: "Reconnect",
+       disconnect: "Disconnect"
 };
 

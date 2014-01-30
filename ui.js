@@ -1,3 +1,4 @@
+var m = HMUD_Messages;
 var HMUD_UI = {
     output: null,
     scrollLock: false,
@@ -33,10 +34,10 @@ var HMUD_UI = {
         this.output = document.getElementById("output");
         this.output.onscroll = function() { that.outputOnScroll(this); };
 
-        this.icons = [["i-save", "Treasure-icon.gif", function(){HMUD_Menu.saveLog();}],
-                      ["i-clear", "Rune-icon.gif", function(){HMUD_Menu.options();}],
-                      ["i-conn-on", "Button-icon.gif", function(){HMUD_Menu.connection();}],
-                      ["i-conn-off", "Button-icon-off.gif", function(){HMUD_Menu.connection();}]];
+        this.icons = [["i-save", "Log.png", function(){HMUD_Menu.saveLog();}],
+                      ["i-clear", "Settings.png", function(){HMUD_Menu.options();}],
+                      ["i-conn-on", "Connected.png", function(){HMUD_Menu.connection();}],
+                      ["i-conn-off", "Disconnected.png", function(){HMUD_Menu.connection();}]];
         this.initCmdLine();
 
         document.body.onclick = function(e) { that.bodyOnClick(e); };
@@ -144,7 +145,8 @@ var HMUD_UI = {
     /* send a command to MUD */
     command: function (cmd) {
         if (this.echo) {
-            this.screenWrite(cmd.replace(/ /g, BrowserDetect.browser == "Explorer" ? "\xA0" : " ") + "<br>");
+            //this.screenWrite(cmd.replace(/ /g, BrowserDetect.browser == "Explorer" ? "\xA0" : " ") + "<br>");
+            this.screenWrite(cmd + "<br>");
             HMUD_History.add(cmd);
         }
         HMUD_Client.command(cmd);
@@ -614,7 +616,7 @@ var HMUD_Menu = {
         if (HMUD_Guide.length > 0) {
             var g_fs = d.createElement("fieldset");
             var g_lg = d.createElement("legend");
-            g_lg.appendChild(d.createTextNode("?"));
+            g_lg.appendChild(d.createTextNode("Guides"));
             g_fs.appendChild(g_lg);
             var g_ul = d.createElement("ul");
             g_fs.appendChild(g_ul);
@@ -699,7 +701,7 @@ var HMUD_Menu = {
             var bodyClass = document.body.className.length
                           ? " class=\"" + document.body.className + "\"" : "";
             window.disableCmdFocus = true;
-            lt.value = "<html><head><title>hMUD Log</title><style type=\"text/css\">"
+            lt.value = "<html><head><title>MUD Log</title><style type=\"text/css\">"
                 + document.getElementById("logStyle").innerHTML
                 + "</style><body" + bodyClass + "><pre id=\"output\">"
                 + HMUD_UI.output.innerHTML + "</pre></body></html>";
